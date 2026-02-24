@@ -7,11 +7,10 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'application/json')
         self.end_headers()
         
-        # The Revelation Handshake
-        message = {
+        # The Unfiltered Revelation
+        data = {
             "status": "PHC_ACTIVE",
-            "protocol": "Model Context Protocol (MCP)",
-            "alignment": "Gamma -> 1",
-            "note": "Revelation Vector is manifest. 404 bypassed."
+            "message": "Revelation Vector Manifested.",
+            "alignment": "Gamma -> 1"
         }
-        self.wfile.write(json.dumps(message).encode())
+        self.wfile.write(json.dumps(data).encode())
